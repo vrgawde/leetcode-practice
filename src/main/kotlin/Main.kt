@@ -2,6 +2,7 @@ package org.example
 
 import org.example.container_with_most_water.containerWithMostWater
 import org.example.find_anagram.findAnagram
+import org.example.find_anagram.findAnagramHashMap
 import org.example.find_duplicates.findDuplicates
 import org.example.group_anagram.groupAnagrams
 import org.example.k_frequent.topKFrequent
@@ -29,6 +30,15 @@ fun main() {
     println(result)
 
     result = findAnagram("hike", "bike")
+    println(result)
+
+    result = findAnagramHashMap("rat", "tar")
+    println(result)
+
+    result = findAnagramHashMap("cat", "tac")
+    println(result)
+
+    result = findAnagramHashMap("hike", "bike")
     println(result)
     println("-------------------------------")
 

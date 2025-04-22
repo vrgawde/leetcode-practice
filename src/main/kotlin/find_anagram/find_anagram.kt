@@ -26,3 +26,21 @@ fun findAnagram(s: String, t: String): Boolean {
     // If all counts are balanced (zero), the strings are anagrams
     return true
 }
+
+fun findAnagramHashMap(s: String, t: String): Boolean {
+    if (s.length != t.length) return false
+    val sHashMap = hashMapOf<Char, Int>()
+    val tHashMap = hashMapOf<Char, Int>()
+    s.forEach { character ->
+        sHashMap[character] = sHashMap[character]?.plus(1) ?: 1
+    }
+
+    t.forEach { character ->
+        tHashMap[character] = tHashMap[character]?.plus(1) ?: 1
+    }
+
+    sHashMap.forEach { value ->
+        if (tHashMap[value.key] != value.value) return false
+    }
+    return true
+}
