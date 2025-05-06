@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.container_with_most_water.containerWithMostWater
+import org.example.find_all_duplicates_constant_space.findDuplicatesConstantSpace
 import org.example.find_anagram.findAnagram
 import org.example.find_anagram.findAnagramHashMap
 import org.example.find_duplicates.findDuplicates
@@ -94,6 +95,12 @@ fun main() {
     println("Container with Most Water")
     val containerWithMostWater = containerWithMostWater(intArrayOf(1,8,6,2,5,4,8,3,7))
     println(containerWithMostWater)
+    println("-------------------------------")
+
+
+    println("Find all duplicates with constant space")
+    val findDuplicatesConstantSpace = findDuplicatesConstantSpace(intArrayOf(1, 3, 4, 2, 2))
+    println(findDuplicatesConstantSpace)
     println("-------------------------------")
 
 }
